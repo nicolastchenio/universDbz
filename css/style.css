@@ -1,4 +1,3 @@
-
 /* -------- Styles globaux */
 * {
     box-sizing: border-box;
@@ -15,7 +14,7 @@ body {
     padding: 20px;
 }
 
-/* -- Ajout de styles pour l'en-tete */
+/* -- styles pour l'en-tete */
 header {
     background: #35424a;
     color: #ffffff;
@@ -28,7 +27,7 @@ header h1 {
     font-size: 24px;
 }
 
-/* -- Styles pour la partie principale */
+/* -- styles pour la partie principale */
 main {
     background: #ffffff;
     padding: 20px;
@@ -38,19 +37,20 @@ main h2 {
     margin-top: 0;
 }
 
-/* -- Styles pour le pied de page */
+/* -- styles pour le pied de page */
 footer {
     background: #35424a;
     color: #ffffff;
-    text-align: center;
     padding: 10px 0;
     margin-top: 20px;
 }
+
 footer p {
     margin: 0;
+    text-align: center;
 }
 
-/* -------- Ajout de styles pour la navigation */
+/* -------- styles pour la navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -82,8 +82,9 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* petit effet au survol */
 .card:hover {
-  transform: scale(1.05);          /* petit effet au survol */
+  transform: scale(1.05);          
 }
 
 .card h3 {
@@ -123,7 +124,7 @@ nav ul li a:hover {
   display: flex;                   /* pour centrer le texte */
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   padding: 15px;                   /* pour éviter que le texte touche les bords */
   box-sizing: border-box;          /* inclut le padding dans la taille */
   font-family: Arial, sans-serif;
@@ -132,6 +133,11 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
 }
+
+.cercle p {
+    text-align: center;
+}
+
 
 /* Responsive : sur les écrans < 600px de large, les cercles passent en colonne */
 @media (max-width: 600px) {
@@ -166,6 +172,51 @@ nav ul li a:hover {
     background-color: #e6c200;
 }
 
+/* -------- styles pour l'animation Kamehameha */
+.kame-zone {
+  position: relative;            /* <== CONTENEUR positionné */
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* le rayon bleu */
+#rayon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  /* centre exact dans la zone */
+  width: 0;
+  height: 20px;
+  background: deepskyblue;
+  border-radius: 10px;
+  display: none;                      /* caché au départ */
+}
+
+/* le bouton */
+#kamehameha {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e73134;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#kamehameha:hover {
+    background-color: #e6c200;
+}
+
+/* animation */
+@keyframes kamehameha {
+  from { width: 0;   opacity: 1; }
+  to   { width: 400px; opacity: 0.8; }
+}
+
 /* -------- styles spécifique */
 section {
     margin-bottom: 20px;
@@ -178,12 +229,14 @@ img {
     margin: 10px 0;
 }
 
-
-
 .centrer {
     /* display: block;       /*  l'image devient un bloc */
     margin-left: auto;       /* marge automatique à gauche */
     margin-right: auto;      /* marge automatique à droite */
+}
+
+p {
+  text-align: justify;
 }
 
 
