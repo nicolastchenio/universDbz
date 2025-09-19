@@ -1,0 +1,189 @@
+
+/* -------- Styles globaux */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------- Styles architecture */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* -- Ajout de styles pour l'en-tete */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* -- Styles pour la partie principale */
+main {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+main h2 {
+    margin-top: 0;
+}
+
+/* -- Styles pour le pied de page */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+footer p {
+    margin: 0;
+}
+
+/* -------- Ajout de styles pour la navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* -------- styles pour les cartes personnages */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;  
+}
+
+.card {
+    background: #e2e2e2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);          /* petit effet au survol */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card img {
+    max-width: 100%;
+    /* height: auto; */
+    height: 500px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* -------- styles pour les cercles */
+/* Le conteneur des cercles */
+.cercles {
+  display: flex;                  /* aligne les enfants sur une ligne */
+  justify-content: space-around;   /* espace égal entre les cercles */
+  align-items: center;
+  flex-wrap: wrap;                 /* permet le retour à la ligne si l’écran est étroit */
+  gap: 20px;                       /* espace minimum entre les cercles (utile en wrap) */
+  padding: 20px;
+}
+
+/* Chaque cercle */
+.cercle {
+  background-color: #FFD700;       /* jaune doré */
+  color: #000;                     /* texte noir pour le contraste */
+  width: 200px;                    /* taille par défaut sur grand écran */
+  height: 200px;
+  border-radius: 50%;              /* rend le div parfaitement circulaire */
+  display: flex;                   /* pour centrer le texte */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;                   /* pour éviter que le texte touche les bords */
+  box-sizing: border-box;          /* inclut le padding dans la taille */
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive : sur les écrans < 600px de large, les cercles passent en colonne */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .cercle {
+    width: 160px;                  /* un peu plus petit pour le mobile */
+    height: 160px;
+    font-size: 0.95rem;
+  }
+}
+
+/* -------- styles pour les boutons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e6c200;
+}
+
+/* -------- styles spécifique */
+section {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+.centrer {
+    /* display: block;       /*  l'image devient un bloc */
+    margin-left: auto;       /* marge automatique à gauche */
+    margin-right: auto;      /* marge automatique à droite */
+}
+
+
